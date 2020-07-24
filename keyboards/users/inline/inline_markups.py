@@ -44,7 +44,7 @@ trigonometry_markup = types.InlineKeyboardMarkup(
             types.InlineKeyboardButton(text="Градусные меры значений sin, cos", callback_data='trigonometry/table')
         ],
         [
-            types.InlineKeyboardButton(text="Определения sin, cos, tg", callback_data='trigonometry/definitions')
+            types.InlineKeyboardButton(text="Определения sin, cos, tg", callback_data='definitions')
         ],
         [
             types.InlineKeyboardButton(text="Формулы производной", callback_data='trigonometry/derivative')
