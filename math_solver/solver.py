@@ -10,7 +10,8 @@ def calculate_expression(expression: str) -> str:
             return tmp_msgs.not_correct_param
 
     try:
-        result_of_expression = f'Результат: <b>{str(eval(expression))}</b>'
+        expression = str(expression)
+        result_of_expression = f'Результат: <b>{eval(expression)}</b>'
     except:
         result_of_expression = tmp_msgs.not_correct_param
     return result_of_expression
