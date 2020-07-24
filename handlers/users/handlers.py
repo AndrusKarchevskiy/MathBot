@@ -38,3 +38,10 @@ async def show_count_buttons(message: types.Message):
     await message.answer(temp_msgs.choose_message, reply_markup=inline_markups.counter_markup)
 
 
+@dp.callback_query_handler(text_contains='algebra')
+@dp.callback_query_handler(text_contains='geometry')
+@dp.callback_query_handler(text_contains='trigonometry')
+async def send_algebra_media(call: types.CallbackQuery):
+    file_path = f'files/{call.data}.png'
+    await call.message.answer_photo(open(file_path, 'rb'))
+    await call.message.edit_reply_markup(reply_markup=None)
